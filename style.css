@@ -1,3 +1,16 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #d7d7d7;
+    height: 100%;
+}
+
 header {
     color: #fff;
     padding: 15px;
@@ -8,7 +21,45 @@ header {
     left: 0;
     width: 100%;
     z-index: 10;
-    font-size: 2rem; /* Ajuste del tamaño del texto */
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: slide 15s infinite;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    z-index: 1;
 }
 
 .hero-content {
@@ -16,28 +67,147 @@ header {
     z-index: 2;
     text-align: center;
     color: #fff;
-    margin-top: 80px; /* Añadir margen para evitar superposición */
 }
 
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    header {
-        font-size: 1.5rem; /* Reducir el tamaño del texto del header en pantallas pequeñas */
-        padding: 10px;
+.hero-content h1 {
+    font-size: calc(2rem + 2vw);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: calc(1rem + 1vw);
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    background-color: #052e4e;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: calc(1rem + 0.5vw);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #044a7f;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.service {
+    text-align: center;
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+.service img {
+    width: calc(10vw + 30px);
+    height: calc(10vw + 30px);
+    filter: invert(100%);
+    transition: filter 0.3s ease, color 0.3s ease;
+}
+
+.service h3 {
+    font-size: calc(1rem + 1vw);
+    color: #ffffff;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.service:hover img {
+    filter: invert(29%) sepia(75%) saturate(1832%) hue-rotate(169deg) brightness(96%) contrast(88%);
+}
+
+.service:hover h3 {
+    color: #044a7f;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Media Queries */
+@media (min-width: 1024px) {
+    .hero-content h1 {
+        font-size: 4rem;
     }
 
-    .hero-content {
-        margin-top: 100px; /* Ajustar el margen superior para evitar superposición */
+    .hero-content p {
+        font-size: 2rem;
+    }
+
+    .hero-button {
+        font-size: 1.5rem;
+    }
+
+    .service img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .service h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 10vw;
+    }
+
+    .hero-content p {
+        font-size: 6vw;
+    }
+
+    .hero-button {
+        font-size: 5.5vw;
+        padding: 10px 20px;
+    }
+
+    .service img {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .service h3 {
+        font-size: 5.5vw;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        font-size: 1.2rem; /* Reducir aún más el tamaño del texto en pantallas más pequeñas */
-        padding: 8px;
+    .hero-content h1 {
+        font-size: 12vw;
     }
 
-    .hero-content {
-        margin-top: 120px; /* Incrementar el margen superior para asegurar que no haya superposición */
+    .hero-content p {
+        font-size: 7vw;
+    }
+
+    .hero-button {
+        font-size: 6.5vw;
+        padding: 8px 16px;
+    }
+
+    .service img {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .service h3 {
+        font-size: 6.5vw;
     }
 }
+
