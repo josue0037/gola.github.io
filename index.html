@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOLA</title>
+    <title>Mi Página</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="overlay"></div>
     <header>
-        <h1 class="header-top">GOLA</h1>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="carousel">
-                <div class="slide" style="background-image: url('background1.jpg');"></div>
-                <div class="slide" style="background-image: url('background2.jpg');"></div>
-                <div class="slide" style="background-image: url('background3.jpg');"></div>
+        <div class="header-content">
+            <div>
+                <h1 class="header">KALATIAND</h1>
+                <h2 class="header">PASAPORTE TURISTIC</h2>
             </div>
-            <div class="hero-content">
-                <h1>CREA TU PASAPORTE</h1>
-                <p>Crea tu pasaporte para tener las mejores recompensas en los mejores negocios.</p>
-                <a href="https://www.example.com" class="hero-button">CREAR</a>
-                <div class="services-container">
-                    <div class="service" onclick="window.location.href='https://www.example.com';">
-                        <img src="hotel.png" alt="Ícono de Hoteles">
-                        <h3>HOTELES</h3>
-                    </div>
-                    <div class="service" onclick="window.location.href='https://www.example.com';">
-                        <img src="restaurante.png" alt="Ícono de Restaurantes">
-                        <h3>RESTAURANTES</h3>
-                    </div>
-                    <div class="service" onclick="window.location.href='https://www.example.com';">
-                        <img src="masaje.png" alt="Ícono de SPA's">
-                        <h3>SPA'S</h3>
-                    </div>
-                </div>
+            <img src="assets/Logo.png" alt="KALATIANDO" class="header-logo">
+        </div>
+    </header>
+    <main class="main">  
+        <section class="content">
+            <div>
+                <img src="assets/explora.png" alt="Explora Ixtapan" class="main-explora">
+            </div>
+            <div class="services-container">
+                <button class="service">
+                    <img src="assets/casas en renta.png" alt="Ícono">
+                    <h3>CASAS EN RENTA</h3>
+                </button>
+                <button class="service">
+                    <img src="assets/restaurante.png" alt="Ícono">
+                    <h3>RESTAURANTES</h3>
+                </button>
+                <button class="service">
+                    <img src="assets/experiencias.png" alt="Ícono">
+                    <h3>EXPERIENCIAS</h3>
+                </button>
+                <button class="service">
+                    <img src="assets/pasaporte.png" alt="Ícono">
+                    <h3>PASAPORTE</h3>
+                </button>
             </div>
         </section>
     </main>
