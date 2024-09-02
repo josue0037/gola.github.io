@@ -56,6 +56,7 @@ header {
 }
 
 header h1 {
+    text-align: right;
     font-size: 6vw;
     font-family: 'Nexa';
 }
@@ -66,6 +67,7 @@ header h1 {
 }
 
 header h2 {
+    text-align: right;
     font-size: 4vw;
     font-family: 'NexaLigth';
 }
@@ -126,7 +128,7 @@ main .content {
 /* Estilos para pantallas más grandes */
 @media screen and (min-width: 768px) {
     .service {
-        width: calc(25% - 20px);
+        width: calc(25% - 50px);
     }
 
     header h1 {
@@ -138,10 +140,19 @@ main .content {
     }
 
     .service h3 {
-        font-size: 2vw;
+        font-size: 1vw;
     }
     .header-logo {
-        height: 6vw;
+        height: 4vw;
+    }
+    header h1 {
+        text-align: right;
+        font-size: 2vw;
+        font-family: 'Nexa';
+    }
+    header h2 {
+        text-align: right;
+        font-size: calc(2vw - .9vw);
+        font-family: 'NexaLigth';
     }
 }
-
