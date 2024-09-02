@@ -1,213 +1,120 @@
-body, html {
+/* Reseteo de márgenes y padding */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
+/* Fondo y configuración básica del body */
 body {
     font-family: Arial, sans-serif;
-    background: #d7d7d7;
-    height: 100%;
-}
-
-header {
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-.hero {
-    position: relative;
-    overflow: hidden;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
     height: 100vh;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-}
-
-.carousel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    animation: slide 15s infinite;
-}
-
-.slide {
-    min-width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-    z-index: 1;
-}
-
-.hero-content {
     position: relative;
-    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.732));
+    z-index: -1;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    color: #fff;
+    margin-bottom: 50px;
 }
 
-.hero-content h1 {
-    font-size: calc(2rem + 2vw);
-    margin-bottom: 20px;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-.hero-content p {
-    font-size: calc(1rem + 1vw);
-    margin-bottom: 30px;
+.header-logo {
+    height: 50px;
 }
 
-.hero-button {
-    background-color: #052e4e;
-    color: #fff;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: calc(1rem + 0.5vw);
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+@font-face {
+    font-family: 'Nexa';
+    src: url('fonts/Nexa-Heavy.ttf');
 }
 
-.hero-button:hover {
-    background-color: #044a7f;
+header h1 {
+    text-align: right;
+    font-size: 24px;
+    font-family: 'Nexa';
+}
+
+@font-face {
+    text-align: right;
+    font-family: 'NexaLigth';
+    src: url('fonts/Nexa-ExtraLight.ttf');
+}
+
+header h2 {
+    font-size: 18px;
+    font-family: 'NexaLigth';
+}
+
+/* Estilo del contenido principal */
+main .content {
+    text-align: center;
+    color: white;
+}
+
+.main-explora {
+    height: 15vw;
+    margin-bottom: 5vw;
 }
 
 .services-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 30px;
-    width: 100%;
-    max-width: 1200px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    flex: 1 1 30%;
-    margin: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
 }
 
 .service img {
-    width: calc(10vw + 30px);
-    height: calc(10vw + 30px);
-    filter: invert(100%);
-    transition: filter 0.3s ease, color 0.3s ease;
-}
-
-.service h3 {
-    font-size: calc(1rem + 1vw);
-    color: #ffffff;
-    margin-top: 10px;
-    transition: color 0.3s ease;
+    height: 8vw;
+    margin-bottom: 1vw;
+    filter: invert(0.4) sepia(1) hue-rotate(20deg) saturate(1000%);
+    transition: filter 0.3s ease;
 }
 
 .service:hover img {
-    filter: invert(29%) sepia(75%) saturate(1832%) hue-rotate(169deg) brightness(96%) contrast(88%);
+    filter: none;
 }
 
-.service:hover h3 {
-    color: #044a7f;
+.service h3 {
+    font-size: 18px;
+    font-family: 'NexaLigth';
+    color: white;
 }
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-}
-
-/* Media Queries */
-@media (min-width: 1024px) {
-    .hero-content h1 {
-        font-size: 4rem;
-    }
-
-    .hero-content p {
-        font-size: 2rem;
-    }
-
-    .hero-button {
-        font-size: 1.5rem;
-    }
-
-    .service img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .service h3 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 10vw;
-    }
-
-    .hero-content p {
-        font-size: 6vw;
-    }
-
-    .hero-button {
-        font-size: 5.5vw;
-        padding: 10px 20px;
-    }
-
-    .service img {
-        width: 20vw;
-        height: 20vw;
-    }
-
-    .service h3 {
-        font-size: 5.5vw;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 12vw;
-    }
-
-    .hero-content p {
-        font-size: 7vw;
-    }
-
-    .hero-button {
-        font-size: 6.5vw;
-        padding: 8px 16px;
-    }
-
-    .service img {
-        width: 25vw;
-        height: 25vw;
-    }
-
-    .service h3 {
-        font-size: 6.5vw;
-    }
-}
-
