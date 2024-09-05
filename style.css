@@ -26,7 +26,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.151),rgba(0, 0, 0, 0.606));
+    background: linear-gradient(rgba(0, 0, 0, 0.472),rgba(0, 0, 0, 0.706));
     z-index: -1;
 }
 
@@ -48,6 +48,7 @@ header {
 
 .header-logo {
     height: 15vw;
+    filter: invert(0.4) sepia(1) hue-rotate(20deg) saturate(1000%);
 }
 
 @font-face {
@@ -55,10 +56,16 @@ header {
     src: url('fonts/Nexa-Heavy.ttf');
 }
 
-header h1 {
+.header h1 {
     text-align: right;
-    font-size: 7vw;
+    font-size: 5vw;
     font-family: 'Nexa';
+    letter-spacing: 0.14em;
+    color: white; /* Color blanco para el resto de las letras */
+}
+
+.header .highlight {
+    color: #FFF212; /* Color amarillo solo para "TI" */
 }
 
 @font-face {
@@ -69,7 +76,10 @@ header h1 {
 header h2 {
     text-align: right;
     font-size: 4vw;
-    font-family: 'NexaLigth';
+    font-family: 'Nexa';
+    color: #FFF212;
+    letter-spacing: 0.25em;
+    word-spacing: 0.30em;
 }
 
 /* Estilo del contenido principal */
@@ -130,15 +140,6 @@ main .content {
     .service {
         width: calc(25% - 50px);
     }
-
-    header h1 {
-        font-size: 3vw;
-    }
-
-    header h2 {
-        font-size: 2vw;
-    }
-
     .service h3 {
         font-size: 1vw;
     }
@@ -149,10 +150,13 @@ main .content {
         text-align: right;
         font-size: 2vw;
         font-family: 'Nexa';
+        letter-spacing: 0.16em;
     }
     header h2 {
-        text-align: right;
+        text-align: left    ;
         font-size: calc(2vw - .9vw);
-        font-family: 'NexaLigth';
+        font-family: 'Nexa';
+        letter-spacing: 0.22em;
+        word-spacing: 0.30em;
     }
 }
