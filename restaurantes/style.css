@@ -20,7 +20,7 @@ body, html {
 
 /* Sección roja superior */
 .section-red {
-    background-image: url('assets/restaurantes/amarillo.jpg');
+    background-image: url('assets/amarillo.jpg');
     flex: 2; /* Ocupa 2/3 del contenedor principal */
     display: flex;
     align-items: center;
@@ -47,7 +47,7 @@ body, html {
 
 @font-face {
     font-family: 'Sun';
-    src: url('/fonts/Sun\ Valley\ -\ Demo.ttf');
+    src: url('fonts/Sun\ Valley\ -\ Demo.ttf');
 }
 
 .text h1 {
@@ -98,7 +98,7 @@ body, html {
 
 @font-face {
     font-family: 'NexaLigth';
-    src: url('/fonts/Nexa-ExtraLight.ttf');
+    src: url('fonts/Nexa-ExtraLight.ttf');
 }
 
 .icon-container h3 {
