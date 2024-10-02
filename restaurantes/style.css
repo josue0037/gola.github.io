@@ -115,7 +115,7 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .service {
@@ -142,8 +142,8 @@ body, html {
 }
 
 .icon-container h3 {
-    font-family: 'NexaLigth';
     font-size: 10vw;
+    font-family: 'NexaLigth';
     color: black;
 }
 
