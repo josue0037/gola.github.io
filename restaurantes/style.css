@@ -126,13 +126,13 @@ body, html {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 20px;
+    padding: 10px;
     outline: none;
 }
 
 .icon-container img {
     height: 20vw;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     gap: 5px;
 }
 
@@ -142,7 +142,7 @@ body, html {
 }
 
 .icon-container h3 {
-    font-size: 10vw;
+    font-size: 4vw;
     font-family: 'NexaLigth';
     color: black;
 }
