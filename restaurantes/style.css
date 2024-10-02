@@ -142,7 +142,7 @@ body, html {
 }
 
 .icon-container h3 {
-    font-size: 4vw !important; 
+    font-size: 4vw; 
     font-family: 'NexaLigth';
     color: black;
 }
@@ -280,12 +280,6 @@ body, html {
     src: url('fonts/Nexa-ExtraLight.ttf');
 }
 
-.icon-container h3 {
-    font-family: 'NexaLigth';
-    font-size: calc(2vw - .5vw);
-    color: black;
-}
-}
 .icon-container h3 {
     font-family: 'NexaLigth';
     font-size: calc(2vw - .5vw);
